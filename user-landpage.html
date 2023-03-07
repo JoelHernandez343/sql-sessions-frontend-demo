@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>User page</title>
+  </head>
+  <body>
+    <header class="bg-blue-400 h-28 flex">
+      <div class="flex justify-center flex-col grow">
+        <span class="flex">
+          <h1 class="text-3xl ml-10 font-bold">Welcome back:</h1>
+          <h1 class="text-3xl ml-4" id="userNameHeader"></h1>
+        </span>
+        <p class="ml-11">User</p>
+      </div>
+
+      <form action="/logout" class="mx-24 self-center">
+        <button
+          type="submit"
+          class="bg-red-400 hover:bg-red-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          LOGOUT
+        </button>
+      </form>
+    </header>
+
+    <section class="p-10">
+      <h1 class="text-gray-700 text-2xl font-bold">Private files</h1>
+      <ul id="privateFilesList"></ul>
+
+      <h1 class="text-gray-700 text-2xl font-bold mt-4">Common files</h1>
+      <ul id="commonFilesList"></ul>
+    </section>
+  </body>
+  <script src="/scripts/landing.js"></script>
+</html>
